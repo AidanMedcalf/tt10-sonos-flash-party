@@ -24,7 +24,7 @@ N 520 -10 560 -10 {lab=VGND}
 N 520 -50 520 -10 {lab=VGND}
 N 560 -80 560 -50 {lab=VPROGMON}
 N 560 -80 660 -80 {lab=VPROGMON}
-C {devices/flash_cell.sym} 280 -140 0 0 {name=X1 model=sky130_fd_pr__special_nfet_pass_flash width=0.45 length=0.15 m=1
+C {devices/flash_cell.sym} 280 -140 0 0 {name=X1 model=sky130_fd_bs_flash__special_sonosfet_star width=0.45 length=0.22 m=1
 format="@name @pinlist @model w=@width l=@length m=@m" }
 C {charge_pump.sym} -230 -320 0 0 {name=x3}
 C {devices/lab_pin.sym} -80 -340 2 0 {name=p2 sig_type=std_logic lab=VPROG}

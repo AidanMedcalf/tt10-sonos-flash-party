@@ -10,6 +10,7 @@ V5 erase_en GND PULSE(0 1.8 25u 0 0 10u 1s)
 
 ** opencircuitdesign pdks install
 .lib /home/uri/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.include /home/uri/pdk/sky130A/libs.tech/ngspice/sonos_see/begin_of_life.spice
 
 
 
@@ -38,7 +39,7 @@ write flash_tb.raw
 *.ipin erase_en
 *.ipin VDPWR
 *.opin VPROGMON
-X1 net2 sonos_gate net3 sonos_body sky130_fd_pr__special_nfet_pass_flash w=0.45 l=0.15 m=1
+X1 net2 sonos_gate net3 sonos_body sky130_fd_bs_flash__special_sonosfet_star w=0.45 l=0.22 m=1
 x3 VAPWR VPROG clk VGND charge_pump
 x4 VPROG VDPWR prog_en sonos_gate net4 VGND VGND level_shifter
 x2 VPROG VDPWR erase_en sonos_body net5 VGND VGND level_shifter

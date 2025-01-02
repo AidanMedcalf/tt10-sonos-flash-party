@@ -57,6 +57,7 @@ format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
 .lib $::SKYWATER_MODELS/sky130.lib.spice tt
+.include $::SKYWATER_MODELS/sonos_see/begin_of_life.spice
 
 "
 spice_ignore=false}
