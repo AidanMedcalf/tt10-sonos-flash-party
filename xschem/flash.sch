@@ -127,7 +127,7 @@ C {devices/lab_pin.sym} 740 -280 2 0 {name=p28 sig_type=std_logic lab=VPROG}
 C {devices/ipin.sym} -720 40 0 0 {name=p32 lab=read_en}
 C {devices/lab_pin.sym} 280 100 0 1 {name=p37 sig_type=std_logic lab=VGND}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 260 -240 0 0 {name=M4
-L=2
+L=20
 W=0.5
 nf=1
 mult=1
@@ -155,8 +155,8 @@ C {devices/lab_pin.sym} 210 -240 2 1 {name=p46 sig_type=std_logic lab=read_en_b}
 C {lab_wire.sym} -700 40 0 1 {name=p33 sig_type=std_logic lab=read_en}
 C {devices/lab_pin.sym} -540 40 0 1 {name=p47 sig_type=std_logic lab=read_en_b}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 260 30 0 0 {name=M8
-L=3
-W=2
+L=6
+W=6
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -170,8 +170,8 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 240 30 0 0 {name=p30 sig_type=std_logic lab=read_en}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 260 -140 2 1 {name=M5
-L=3
-W=2
+L=1
+W=5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
