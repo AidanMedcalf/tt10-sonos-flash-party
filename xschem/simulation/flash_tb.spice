@@ -11,8 +11,7 @@ V6 read_en GND PULSE(0 1.8 40u 0 0 2u 1s)
 
 ** opencircuitdesign pdks install
 .lib /home/uri/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
-.include /home/uri/pdk/sky130A/libs.tech/combined/sonos_see_e/begin_of_life.pm3.spice
-.include /home/uri/pdk/sky130A/libs.tech/combined/sonos_see_e/begin_of_life.spice
+.include /home/uri/pdk/sky130A/libs.tech/combined/sonos_see/begin_of_life.spice
 
 
 
