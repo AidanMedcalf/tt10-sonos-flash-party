@@ -5,8 +5,8 @@ V {}
 S {}
 E {}
 B 2 420 -300 1220 100 {flags=graph
-y1=-0.58
-y2=9.3
+y1=-5
+y2=8
 ypos1=0
 ypos2=2
 divy=10
