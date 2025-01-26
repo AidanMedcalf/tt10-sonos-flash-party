@@ -147,7 +147,7 @@ C {lab_wire.sym} -720 60 0 1 {name=p33 sig_type=std_logic lab=read_en}
 C {devices/lab_pin.sym} -560 60 0 1 {name=p47 sig_type=std_logic lab=read_en_b}
 C {devices/lab_pin.sym} 240 30 0 0 {name=p30 sig_type=std_logic lab=read_en}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 260 -140 2 1 {name=M5
-L=1
+L=0.5
 W=5
 nf=1
 mult=1
@@ -161,8 +161,8 @@ model=nfet_g5v0d10v5
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 260 30 0 0 {name=M8
-L=1
-W=5
+L=0.5
+W=2
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 

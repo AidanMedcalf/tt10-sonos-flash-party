@@ -21,9 +21,9 @@ XM4 data_out_b read_en_b VDPWR VDPWR sky130_fd_pr__pfet_g5v0d10v5 L=20 W=0.5 nf=
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 x5 data_out_b data_out VDPWR VGND inverter
 x6 read_en read_en_b VDPWR VGND inverter
-XM5 net3 data_out_b data_out_b data_out_b sky130_fd_pr__nfet_g5v0d10v5 L=1 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+XM5 net3 data_out_b data_out_b data_out_b sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM8 net2 read_en VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+XM8 net2 read_en VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 x2 VAPWR VPRGNEG clk VGND charge_pump_neg
 x4 VDPWR sonos_gate VPRGNEG VGND VPRGPOS prog_en erase_en vprog_controller
