@@ -160,9 +160,9 @@ sa=0 sb=0 sd=0
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
-C {sky130_fd_pr/nfet_g5v0d16v0.sym} 260 30 0 0 {name=M8
-W=6
-L=6
+C {sky130_fd_pr/nfet_g5v0d10v5.sym} 260 30 0 0 {name=M8
+L=1
+W=5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -171,7 +171,7 @@ as="'int((nf+2)/2) * W/nf * 0.29'"
 ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
 nrd="'0.29 / W'" nrs="'0.29 / W'"
 sa=0 sb=0 sd=0
-model=nfet_g5v0d16v0
+model=nfet_g5v0d10v5
 spiceprefix=X
 }
 C {charge_pump_neg.sym} -230 -210 0 0 {name=x2}
