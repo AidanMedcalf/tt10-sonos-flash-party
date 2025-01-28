@@ -26,7 +26,7 @@ pinout:
   # Inputs
   ui[0]: "prog_en"
   ui[1]: "erase_en"
-  ui[2]: ""
+  ui[2]: "read_en"
   ui[3]: ""
   ui[4]: ""
   ui[5]: ""
