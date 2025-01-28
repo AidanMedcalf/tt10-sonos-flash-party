@@ -161,8 +161,8 @@ spiceprefix=X
 C {devices/opin.sym} 530 50 0 0 {name=p11 lab=VPRGNEG}
 C {vgnd.sym} 40 70 0 0 {name=l5 lab=VGND}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 110 30 1 0 {name=M5
-L=8
-W=7
+L=2
+W=0.5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -175,8 +175,8 @@ model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 250 30 1 0 {name=M6
-L=8
-W=7
+L=2
+W=0.5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -189,8 +189,8 @@ model=pfet_g5v0d10v5
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 390 30 1 0 {name=M7
-L=8
-W=7
+L=2
+W=0.5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
