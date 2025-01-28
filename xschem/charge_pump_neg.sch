@@ -160,7 +160,7 @@ spiceprefix=X
 }
 C {devices/opin.sym} 530 50 0 0 {name=p11 lab=VPRGNEG}
 C {vgnd.sym} 40 70 0 0 {name=l5 lab=VGND}
-C {sky130_fd_pr/pfet_g5v0d10v5.sym} 110 30 1 0 {name=M5
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 110 30 3 1 {name=M5
 L=2
 W=0.5
 nf=1
@@ -174,7 +174,7 @@ sa=0 sb=0 sd=0
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
-C {sky130_fd_pr/pfet_g5v0d10v5.sym} 250 30 1 0 {name=M6
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 250 30 3 1 {name=M6
 L=2
 W=0.5
 nf=1
@@ -188,7 +188,7 @@ sa=0 sb=0 sd=0
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
-C {sky130_fd_pr/pfet_g5v0d10v5.sym} 390 30 1 0 {name=M7
+C {sky130_fd_pr/pfet_g5v0d10v5.sym} 390 30 3 1 {name=M7
 L=2
 W=0.5
 nf=1
