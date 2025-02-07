@@ -1,0 +1,88 @@
+| units: 1 tech: sky130A format: MIT
+x pos_en VGND pos_mid_b VGND s=8400,268 d=5400,308 l=3e+08 w=5e+07 x=1.93e+09 y=-1.0505e+09 sky130_fd_pr__nfet_g5v0d10v5
+x neg_mid_b dcgint VOUT dcgint s=2900,158 d=2900,158 l=5e+07 w=5e+07 x=2.008e+09 y=-9.005e+08 sky130_fd_pr__pfet_g5v0d10v5
+x pos_en pos_en_b VDPWR VDPWR s=5400,308 d=8400,268 l=3e+08 w=5e+07 x=7.78e+08 y=-1.4105e+09 sky130_fd_pr__pfet_g5v0d10v5
+x VDPWR vintp VOUT VPRGPOS s=2900,158 d=2900,158 l=5e+07 w=5e+07 x=1.399e+09 y=-7.955e+08 sky130_fd_pr__pfet_g5v0d10v5
+x neg_mid_b VOUT dcgint dcgint s=2900,158 d=5800,316 l=5e+07 w=5e+07 x=2.087e+09 y=-9.005e+08 sky130_fd_pr__pfet_g5v0d10v5
+x pos_en VGND pos_mid_b VGND s=8400,268 d=5400,308 l=3e+08 w=5e+07 x=1.93e+09 y=-1.1555e+09 sky130_fd_pr__nfet_g5v0d10v5
+x pos_mid_b VPRGPOS vintp VPRGPOS s=5400,308 d=2900,158 l=5e+07 w=5e+07 x=1.162e+09 y=-9.005e+08 sky130_fd_pr__pfet_g5v0d10v5
+x neg_en VGND neg_en_b VGND s=8400,268 d=5400,308 l=3e+08 w=5e+07 x=1.93e+09 y=-1.2605e+09 sky130_fd_pr__nfet_g5v0d10v5
+x pos_mid_b vintp VPRGPOS VPRGPOS s=2900,158 d=2900,158 l=5e+07 w=5e+07 x=1.241e+09 y=-9.005e+08 sky130_fd_pr__pfet_g5v0d10v5
+x neg_mid_b dcgint VOUT dcgint s=2900,158 d=2900,158 l=5e+07 w=5e+07 x=2.008e+09 y=-7.955e+08 sky130_fd_pr__pfet_g5v0d10v5
+x neg_mid_b VOUT dcgint dcgint s=2900,158 d=5800,316 l=5e+07 w=5e+07 x=2.087e+09 y=-7.955e+08 sky130_fd_pr__pfet_g5v0d10v5
+x neg_en VDPWR neg_mid VDPWR s=2900,158 d=2900,158 l=5e+07 w=5e+07 x=2.038e+09 y=-1.5485e+09 sky130_fd_pr__pfet_g5v0d10v5
+x pos_en_b VGND pos_mid VGND s=8400,268 d=5400,308 l=3e+08 w=5e+07 x=1.162e+09 y=-1.0505e+09 sky130_fd_pr__nfet_g5v0d10v5
+x neg_en VDPWR neg_en_b VDPWR s=8400,268 d=5800,316 l=3e+08 w=5e+07 x=1.93e+09 y=-1.4105e+09 sky130_fd_pr__pfet_g5v0d10v5
+x neg_en_b neg_mid_b VDPWR VDPWR s=5400,308 d=2900,158 l=5e+07 w=5e+07 x=1.801e+09 y=-1.7305e+09 sky130_fd_pr__pfet_g5v0d10v5
+x neg_en_b neg_mid_b VDPWR VDPWR s=2900,158 d=2900,158 l=5e+07 w=5e+07 x=2.117e+09 y=-1.7305e+09 sky130_fd_pr__pfet_g5v0d10v5
+x pos_mid_b VPRGPOS vintp VPRGPOS s=2900,158 d=2900,158 l=5e+07 w=5e+07 x=1.478e+09 y=-9.005e+08 sky130_fd_pr__pfet_g5v0d10v5
+x neg_mid_b VPRGNEG a_2408_n3852# VPRGNEG s=5400,308 d=2900,158 l=3e+08 w=5e+07 x=9.04e+08 y=-1.8205e+09 sky130_fd_pr__nfet_g5v0d10v5
+x neg_en_b neg_mid_b VDPWR VDPWR s=2900,158 d=2900,158 l=5e+07 w=5e+07 x=1.959e+09 y=-1.5485e+09 sky130_fd_pr__pfet_g5v0d10v5
+x VDPWR VOUT vintp VPRGPOS s=5400,308 d=2900,158 l=5e+07 w=5e+07 x=1.162e+09 y=-7.955e+08 sky130_fd_pr__pfet_g5v0d10v5
+x pos_en_b VGND pos_mid VGND s=8400,268 d=5400,308 l=3e+08 w=5e+07 x=1.162e+09 y=-1.1555e+09 sky130_fd_pr__nfet_g5v0d10v5
+x neg_en VDPWR neg_mid VDPWR s=2900,158 d=2900,158 l=5e+07 w=5e+07 x=1.88e+09 y=-1.7305e+09 sky130_fd_pr__pfet_g5v0d10v5
+x neg_en VDPWR neg_mid VDPWR s=2900,158 d=5400,308 l=5e+07 w=5e+07 x=2.196e+09 y=-1.7305e+09 sky130_fd_pr__pfet_g5v0d10v5
+x VDPWR vintp VOUT VPRGPOS s=2900,158 d=2900,158 l=5e+07 w=5e+07 x=1.241e+09 y=-7.955e+08 sky130_fd_pr__pfet_g5v0d10v5
+x pos_en_b pos_mid VGND VGND s=5400,308 d=8400,268 l=3e+08 w=5e+07 x=1.546e+09 y=-1.0505e+09 sky130_fd_pr__nfet_g5v0d10v5
+x pos_en VGND pos_en_b VGND s=8400,268 d=5400,308 l=3e+08 w=5e+07 x=1.162e+09 y=-1.2605e+09 sky130_fd_pr__nfet_g5v0d10v5
+x neg_mid_b VPRGNEG a_2408_n3852# VPRGNEG s=5400,308 d=2900,158 l=3e+08 w=5e+07 x=9.04e+08 y=-1.9255e+09 sky130_fd_pr__nfet_g5v0d10v5
+x VDPWR VOUT vintp VPRGPOS s=2900,158 d=2900,158 l=5e+07 w=5e+07 x=1.478e+09 y=-7.955e+08 sky130_fd_pr__pfet_g5v0d10v5
+x pos_en_b pos_mid VGND VGND s=5400,308 d=8400,268 l=3e+08 w=5e+07 x=1.546e+09 y=-1.1555e+09 sky130_fd_pr__nfet_g5v0d10v5
+x pos_en VDPWR pos_en_b VDPWR s=8400,268 d=5400,308 l=3e+08 w=5e+07 x=1.162e+09 y=-1.4105e+09 sky130_fd_pr__pfet_g5v0d10v5
+x pos_mid_b vintp VPRGPOS VPRGPOS s=2900,158 d=5400,308 l=5e+07 w=5e+07 x=1.557e+09 y=-9.005e+08 sky130_fd_pr__pfet_g5v0d10v5
+x neg_en neg_en_b VGND VGND s=5400,308 d=8400,268 l=3e+08 w=5e+07 x=1.546e+09 y=-1.2605e+09 sky130_fd_pr__nfet_g5v0d10v5
+x pos_mid_b VPRGPOS vintp VPRGPOS s=2900,158 d=2900,158 l=5e+07 w=5e+07 x=1.32e+09 y=-9.005e+08 sky130_fd_pr__pfet_g5v0d10v5
+x pos_en_b VGND dcgint VGND s=5400,308 d=5400,308 l=3e+08 w=5e+07 x=1.836e+09 y=-1.8685e+09 sky130_fd_pr__nfet_g5v0d10v5
+x neg_en neg_mid VDPWR VDPWR s=5400,308 d=2900,158 l=5e+07 w=5e+07 x=1.801e+09 y=-1.5485e+09 sky130_fd_pr__pfet_g5v0d10v5
+x neg_en neg_en_b VDPWR VDPWR s=5400,308 d=8400,268 l=3e+08 w=5e+07 x=1.546e+09 y=-1.4105e+09 sky130_fd_pr__pfet_g5v0d10v5
+x neg_en neg_mid VDPWR VDPWR s=2900,158 d=2900,158 l=5e+07 w=5e+07 x=2.117e+09 y=-1.5485e+09 sky130_fd_pr__pfet_g5v0d10v5
+x pos_en_b VGND dcgint VGND s=5400,308 d=5400,308 l=3e+08 w=5e+07 x=1.836e+09 y=-1.9735e+09 sky130_fd_pr__nfet_g5v0d10v5
+x pos_mid pos_mid_b VPRGPOS VPRGPOS s=5400,308 d=5400,308 l=3e+08 w=5e+07 x=7.78e+08 y=-9.005e+08 sky130_fd_pr__pfet_g5v0d10v5
+x neg_mid VPRGNEG neg_mid_b VPRGNEG s=8400,268 d=5800,316 l=1e+08 w=5e+07 x=1.431e+09 y=-1.6925e+09 sky130_fd_pr__nfet_g5v0d10v5
+x neg_en_b VDPWR neg_mid_b VDPWR s=2900,158 d=2900,158 l=5e+07 w=5e+07 x=1.88e+09 y=-1.5485e+09 sky130_fd_pr__pfet_g5v0d10v5
+x neg_en_b VDPWR neg_mid_b VDPWR s=2900,158 d=5400,308 l=5e+07 w=5e+07 x=2.196e+09 y=-1.5485e+09 sky130_fd_pr__pfet_g5v0d10v5
+x neg_mid_b neg_mid VPRGNEG VPRGNEG s=5800,316 d=8400,268 l=1e+08 w=5e+07 x=1.247e+09 y=-1.6925e+09 sky130_fd_pr__nfet_g5v0d10v5
+x VDPWR vintp VOUT VPRGPOS s=2900,158 d=5400,308 l=5e+07 w=5e+07 x=1.557e+09 y=-7.955e+08 sky130_fd_pr__pfet_g5v0d10v5
+x VDPWR VOUT vintp VPRGPOS s=2900,158 d=2900,158 l=5e+07 w=5e+07 x=1.32e+09 y=-7.955e+08 sky130_fd_pr__pfet_g5v0d10v5
+x neg_mid_b VOUT dcgint dcgint s=5800,316 d=2900,158 l=5e+07 w=5e+07 x=1.929e+09 y=-9.005e+08 sky130_fd_pr__pfet_g5v0d10v5
+x pos_en pos_mid_b VGND VGND s=5400,308 d=8400,268 l=3e+08 w=5e+07 x=7.78e+08 y=-1.0505e+09 sky130_fd_pr__nfet_g5v0d10v5
+x pos_en_b VGND dcgint VGND s=5400,308 d=5400,308 l=3e+08 w=5e+07 x=1.836e+09 y=-2.0785e+09 sky130_fd_pr__nfet_g5v0d10v5
+x VDPWR a_2408_n3852# VOUT VPRGNEG s=2900,158 d=5400,308 l=3e+08 w=5e+07 x=1.233e+09 y=-1.8205e+09 sky130_fd_pr__nfet_g5v0d10v5
+x pos_mid_b pos_mid VPRGPOS VPRGPOS s=5400,308 d=5400,308 l=3e+08 w=5e+07 x=7.78e+08 y=-7.955e+08 sky130_fd_pr__pfet_g5v0d10v5
+x pos_en pos_mid_b VGND VGND s=5400,308 d=8400,268 l=3e+08 w=5e+07 x=7.78e+08 y=-1.1555e+09 sky130_fd_pr__nfet_g5v0d10v5
+x VDPWR a_2408_n3852# VOUT VPRGNEG s=2900,158 d=5400,308 l=3e+08 w=5e+07 x=1.233e+09 y=-1.9255e+09 sky130_fd_pr__nfet_g5v0d10v5
+x pos_mid_b vintp VPRGPOS VPRGPOS s=2900,158 d=2900,158 l=5e+07 w=5e+07 x=1.399e+09 y=-9.005e+08 sky130_fd_pr__pfet_g5v0d10v5
+x neg_en_b VDPWR neg_mid_b VDPWR s=2900,158 d=2900,158 l=5e+07 w=5e+07 x=2.038e+09 y=-1.7305e+09 sky130_fd_pr__pfet_g5v0d10v5
+x neg_mid_b VOUT dcgint dcgint s=5800,316 d=2900,158 l=5e+07 w=5e+07 x=1.929e+09 y=-7.955e+08 sky130_fd_pr__pfet_g5v0d10v5
+x pos_en pos_en_b VGND VGND s=5400,308 d=8400,268 l=3e+08 w=5e+07 x=7.78e+08 y=-1.2605e+09 sky130_fd_pr__nfet_g5v0d10v5
+x neg_en neg_mid VDPWR VDPWR s=2900,158 d=2900,158 l=5e+07 w=5e+07 x=1.959e+09 y=-1.7305e+09 sky130_fd_pr__pfet_g5v0d10v5
+C VDPWR VPRGNEG 6.5
+C dcgint neg_mid_b 2.1
+C neg_en_b neg_en 3.0
+C pos_en_b pos_en 2.3
+C pos_mid_b VPRGPOS 2.2
+C VDPWR neg_en 2.1
+C neg_mid_b VPRGNEG 2.2
+C VDPWR0 17.4
+R VDPWR 51285
+C neg_en0 3.5
+R neg_en 1690
+C pos_en0 6.8
+R pos_en 1227
+R VOUT 7505
+R VPRGNEG 36970
+C VPRGPOS0 4.2
+R VPRGPOS 14222
+R VGND 12908
+R a_2408_n3852# 850
+R neg_mid 3626
+R neg_en_b 3664
+C pos_en_b0 7.6
+R pos_en_b 3297
+C neg_mid_b0 2.0
+R neg_mid_b 5032
+R vintp 4806
+R pos_mid 2667
+R pos_mid_b 4102
+C dcgint0 2.9
+R dcgint 7321

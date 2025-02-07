@@ -1,6 +1,6 @@
 v {xschem version=3.4.6 file_version=1.2}
 G {}
-K {type=subcircuit
+K {type=primitive
 format="@name @pinlist @symname"
 template="name=x1"
 }
@@ -18,13 +18,13 @@ L 4 60 50 60 70 {}
 L 4 -50 50 -50 70 {}
 L 4 60 -70 60 -50 {}
 L 4 -120 10 -100 10 {}
-B 5 -52.5 -72.5 -47.5 -67.5 {name=VDPWR dir=inout}
-B 5 117.5 -2.5 122.5 2.5 {name=VOUT dir=out}
-B 5 57.5 67.5 62.5 72.5 {name=VPRGNEG dir=inout}
-B 5 -52.5 67.5 -47.5 72.5 {name=VGND dir=inout}
-B 5 57.5 -72.5 62.5 -67.5 {name=VPRGPOS dir=inout}
-B 5 -122.5 -12.5 -117.5 -7.5 {name=pos_en dir=in}
-B 5 -122.5 7.5 -117.5 12.5 {name=neg_en dir=in}
+B 5 -122.5 -12.5 -117.5 -7.5 {name=pos_en dir=in sim_pinnumber=1}
+B 5 -122.5 7.5 -117.5 12.5 {name=neg_en dir=in sim_pinnumber=2}
+B 5 117.5 -2.5 122.5 2.5 {name=VOUT dir=out sim_pinnumber=3}
+B 5 -52.5 -72.5 -47.5 -67.5 {name=VDPWR dir=inout sim_pinnumber=4}
+B 5 -52.5 67.5 -47.5 72.5 {name=VGND dir=inout sim_pinnumber=5}
+B 5 57.5 -72.5 62.5 -67.5 {name=VPRGPOS dir=inout sim_pinnumber=6}
+B 5 57.5 67.5 62.5 72.5 {name=VPRGNEG dir=inout sim_pinnumber=7}
 T {VPROG} -26.5 -18.5 0 0 0.3 0.3 {}
 T {@name} 105 -62 0 0 0.2 0.2 {}
 T {VDPWR} -37.5 -44 0 1 0.2 0.2 {}
