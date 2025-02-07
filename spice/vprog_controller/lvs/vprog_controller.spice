@@ -1,0 +1,62 @@
+* NGSPICE file created from vprog_controller.ext - technology: sky130A
+
+.subckt vprog_controller pos_en neg_en VOUT VDPWR VGND VPRGPOS VPRGNEG
+X0 pos_mid_b pos_en VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.135 pd=1.54 as=0.21 ps=1.34 w=0.5 l=3
+X1 VOUT neg_mid_b dcgint dcgint sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X2 VDPWR pos_en pos_en_b VDPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.21 pd=1.34 as=0.135 ps=1.54 w=0.5 l=3
+X3 VOUT VDPWR vintp VPRGPOS sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X4 dcgint neg_mid_b VOUT dcgint sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.0725 ps=0.79 w=0.5 l=0.5
+X5 pos_mid_b pos_en VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.135 pd=1.54 as=0.21 ps=1.34 w=0.5 l=3
+X6 vintp pos_mid_b VPRGPOS VPRGPOS sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.135 ps=1.54 w=0.5 l=0.5
+X7 neg_en_b neg_en VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.135 pd=1.54 as=0.21 ps=1.34 w=0.5 l=3
+X8 VPRGPOS pos_mid_b vintp VPRGPOS sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X9 VOUT neg_mid_b dcgint dcgint sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X10 dcgint neg_mid_b VOUT dcgint sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.0725 ps=0.79 w=0.5 l=0.5
+X11 neg_mid neg_en VDPWR VDPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X12 pos_mid pos_en_b VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.135 pd=1.54 as=0.21 ps=1.34 w=0.5 l=3
+X13 neg_en_b neg_en VDPWR VDPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.21 ps=1.34 w=0.5 l=3
+X14 VDPWR neg_en_b neg_mid_b VDPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.135 ps=1.54 w=0.5 l=0.5
+X15 VDPWR neg_en_b neg_mid_b VDPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X16 vintp pos_mid_b VPRGPOS VPRGPOS sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X17 a_2408_n3852# neg_mid_b VPRGNEG VPRGNEG sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.135 ps=1.54 w=0.5 l=3
+X18 VDPWR neg_en_b neg_mid_b VDPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X19 vintp VDPWR VOUT VPRGPOS sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.135 ps=1.54 w=0.5 l=0.5
+X20 pos_mid pos_en_b VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.135 pd=1.54 as=0.21 ps=1.34 w=0.5 l=3
+X21 neg_mid neg_en VDPWR VDPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X22 neg_mid neg_en VDPWR VDPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.135 pd=1.54 as=0.0725 ps=0.79 w=0.5 l=0.5
+X23 VOUT VDPWR vintp VPRGPOS sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X24 VGND pos_en_b pos_mid VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.21 pd=1.34 as=0.135 ps=1.54 w=0.5 l=3
+X25 pos_en_b pos_en VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.135 pd=1.54 as=0.21 ps=1.34 w=0.5 l=3
+X26 a_2408_n3852# neg_mid_b VPRGNEG VPRGNEG sky130_fd_pr__nfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.135 ps=1.54 w=0.5 l=3
+X27 vintp VDPWR VOUT VPRGPOS sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X28 VGND pos_en_b pos_mid VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.21 pd=1.34 as=0.135 ps=1.54 w=0.5 l=3
+X29 pos_en_b pos_en VDPWR VDPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.135 pd=1.54 as=0.21 ps=1.34 w=0.5 l=3
+X30 VPRGPOS pos_mid_b vintp VPRGPOS sky130_fd_pr__pfet_g5v0d10v5 ad=0.135 pd=1.54 as=0.0725 ps=0.79 w=0.5 l=0.5
+X31 VGND neg_en neg_en_b VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.21 pd=1.34 as=0.135 ps=1.54 w=0.5 l=3
+X32 vintp pos_mid_b VPRGPOS VPRGPOS sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X33 dcgint pos_en_b VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.135 pd=1.54 as=0.135 ps=1.54 w=0.5 l=3
+X34 VDPWR neg_en neg_mid VDPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.135 ps=1.54 w=0.5 l=0.5
+X35 VDPWR neg_en neg_en_b VDPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.21 pd=1.34 as=0.135 ps=1.54 w=0.5 l=3
+X36 VDPWR neg_en neg_mid VDPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X37 dcgint pos_en_b VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.135 pd=1.54 as=0.135 ps=1.54 w=0.5 l=3
+X38 VPRGPOS pos_mid pos_mid_b VPRGPOS sky130_fd_pr__pfet_g5v0d10v5 ad=0.135 pd=1.54 as=0.135 ps=1.54 w=0.5 l=3
+X39 neg_mid_b neg_mid VPRGNEG VPRGNEG sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.21 ps=1.34 w=0.5 l=1
+X40 neg_mid_b neg_en_b VDPWR VDPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X41 neg_mid_b neg_en_b VDPWR VDPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.135 pd=1.54 as=0.0725 ps=0.79 w=0.5 l=0.5
+X42 VPRGNEG neg_mid_b neg_mid VPRGNEG sky130_fd_pr__nfet_g5v0d10v5 ad=0.21 pd=1.34 as=0.145 ps=1.58 w=0.5 l=1
+X43 VOUT VDPWR vintp VPRGPOS sky130_fd_pr__pfet_g5v0d10v5 ad=0.135 pd=1.54 as=0.0725 ps=0.79 w=0.5 l=0.5
+X44 vintp VDPWR VOUT VPRGPOS sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X45 dcgint neg_mid_b VOUT dcgint sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.145 ps=1.58 w=0.5 l=0.5
+X46 VGND pos_en pos_mid_b VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.21 pd=1.34 as=0.135 ps=1.54 w=0.5 l=3
+X47 dcgint pos_en_b VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.135 pd=1.54 as=0.135 ps=1.54 w=0.5 l=3
+X48 VOUT VDPWR a_2408_n3852# VPRGNEG sky130_fd_pr__nfet_g5v0d10v5 ad=0.135 pd=1.54 as=0.0725 ps=0.79 w=0.5 l=3
+X49 VPRGPOS pos_mid_b pos_mid VPRGPOS sky130_fd_pr__pfet_g5v0d10v5 ad=0.135 pd=1.54 as=0.135 ps=1.54 w=0.5 l=3
+X50 VGND pos_en pos_mid_b VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.21 pd=1.34 as=0.135 ps=1.54 w=0.5 l=3
+X51 VOUT VDPWR a_2408_n3852# VPRGNEG sky130_fd_pr__nfet_g5v0d10v5 ad=0.135 pd=1.54 as=0.0725 ps=0.79 w=0.5 l=3
+X52 VPRGPOS pos_mid_b vintp VPRGPOS sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X53 neg_mid_b neg_en_b VDPWR VDPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+X54 dcgint neg_mid_b VOUT dcgint sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.145 ps=1.58 w=0.5 l=0.5
+X55 VGND pos_en pos_en_b VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.21 pd=1.34 as=0.135 ps=1.54 w=0.5 l=3
+X56 VDPWR neg_en neg_mid VDPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.0725 pd=0.79 as=0.0725 ps=0.79 w=0.5 l=0.5
+.ends
+
