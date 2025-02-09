@@ -1,7 +1,7 @@
 # Tiny Tapeout project information
 project:
   title:        "SONOS Flash Party"      # Project title
-  author:       "Uri Shaked"      # Your name
+  author:       "Uri Shaked, Aidan Medcalf"      # Your name
   discord:      "urish"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "Experimental SONOS Flash controller for Tiny Tapeout"      # One line description of what your project does
   language:     "Analog" # other examples include Verilog, Amaranth, VHDL, etc
