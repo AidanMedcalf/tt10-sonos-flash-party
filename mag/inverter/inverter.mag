@@ -1,0 +1,50 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1739087840
+<< viali >>
+rect 36 376 70 410
+rect 36 228 70 262
+rect 36 -253 70 -219
+rect 36 -401 70 -367
+<< metal1 >>
+rect 23 410 190 419
+rect 23 376 36 410
+rect 70 376 190 410
+rect 23 262 190 376
+rect 23 228 36 262
+rect 70 228 190 262
+rect 23 219 190 228
+rect 808 226 894 278
+rect 473 37 519 219
+rect 848 37 894 226
+rect 464 -27 528 37
+rect 839 -27 903 37
+rect 473 -210 519 -27
+rect 848 -210 894 -27
+rect 23 -219 190 -210
+rect 23 -253 36 -219
+rect 70 -253 190 -219
+rect 23 -367 190 -253
+rect 806 -262 894 -210
+rect 23 -401 36 -367
+rect 70 -401 190 -367
+rect 23 -410 190 -401
+use sky130_fd_pr__pfet_01v8_29FY9H  XM1
+timestamp 1739087790
+transform 1 0 496 0 1 319
+box -496 -319 496 319
+use sky130_fd_pr__nfet_01v8_KAAY2V  XM2
+timestamp 1739087790
+transform 1 0 496 0 1 -310
+box -496 -310 496 310
+<< labels >>
+flabel metal1 464 -27 528 37 0 FreeMono 64 0 0 0 A
+port 0 nsew signal input
+flabel metal1 839 -27 903 37 0 FreeMono 64 0 0 0 Y
+port 1 nsew signal output
+flabel metal1 40 287 184 351 0 FreeMono 64 0 0 0 VDD
+port 2 nsew power input
+flabel metal1 40 -342 184 -278 0 FreeMono 64 0 0 0 VSS
+port 3 nsew ground input
+<< end >>

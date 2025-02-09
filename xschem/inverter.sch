@@ -16,8 +16,8 @@ N 320 170 410 170 {
 lab=Y}
 N 320 60 320 90 {lab=VDD}
 N 320 250 320 290 {lab=VSS}
-C {devices/ipin.sym} 280 170 0 0 {name=p1 lab=A}
-C {devices/opin.sym} 410 170 0 0 {name=p2 lab=Y}
+C {devices/ipin.sym} 280 170 0 0 {name=p1 lab=A sim_pinnumber=1}
+C {devices/opin.sym} 410 170 0 0 {name=p2 lab=Y sim_pinnumber=2}
 C {sky130_fd_pr/nfet_01v8.sym} 300 220 0 0 {name=M2
 L=3
 W=1
@@ -46,5 +46,5 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/ipin.sym} 320 60 0 0 {name=p3 lab=VDD}
-C {devices/ipin.sym} 320 290 0 0 {name=p4 lab=VSS}
+C {devices/ipin.sym} 320 60 0 0 {name=p3 lab=VDD sim_pinnumber=3}
+C {devices/ipin.sym} 320 290 0 0 {name=p4 lab=VSS sim_pinnumber=4}

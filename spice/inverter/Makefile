@@ -1,4 +1,4 @@
-MACRO=vprog_controller
+MACRO=inverter
 PDK?=sky130A
 MAG_DIR=../../mag
 SCH_DIR=../../xschem
@@ -8,7 +8,7 @@ all: lvs
 
 lvs/$(MACRO).spice: $(MAG_FILE)
 	magic -noconsole -dnull $(MAG_DIR)/tcl/extract_for_lvs.tcl $< $@
-	rm $(MACRO).ext
+	rm *.ext
 
 sch/$(MACRO).spice: $(SCH_DIR)/$(MACRO).sch
 	cd $(SCH_DIR) && xschem -n -s -x -r -q --tcl 'set lvs_ignore 1; set lvs_netlist 1' -N lvs_$(MACRO).spice $(MACRO).sch
