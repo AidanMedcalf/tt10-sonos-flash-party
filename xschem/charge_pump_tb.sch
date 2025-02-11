@@ -5,15 +5,15 @@ V {}
 S {}
 E {}
 B 2 420 -300 1220 100 {flags=graph
-y1=-5
-y2=12
+y1=-1.8844291
+y2=12.448294
 ypos1=0
 ypos2=2
 divy=10
 subdivy=1
 unity=1
-x1=2.11779e-07
-x2=0.000102133
+x1=0
+x2=0.0001
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -26,6 +26,122 @@ unitx=1
 logx=0
 logy=0
 rainbow=0}
+B 2 420 -700 1220 -300 {flags=graph
+y1=-0.00031
+y2=4.8e-06
+ypos1=0
+ypos2=2
+divy=10
+subdivy=1
+unity=1
+x1=0
+x2=0.0001
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rainbow=0
+color="4 5"
+node="i(@r2[i])
+i(v1)"}
+B 2 1220 -300 2020 100 {flags=graph
+y1=-0.027
+y2=3.4
+ypos1=0
+ypos2=2
+divy=10
+subdivy=1
+unity=1
+x1=0
+x2=0.0001
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rainbow=0
+color="7 13 14"
+node="clk
+x1.clkinb
+x1.clkina"}
+B 2 1220 -700 2020 -300 {flags=graph
+y1=1.4
+y2=5.5
+ypos1=0
+ypos2=2
+divy=10
+subdivy=1
+unity=1
+x1=0
+x2=0.0001
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rainbow=0
+color="5 6 4"
+node="x1.stage1
+x1.stage2
+ua[0]"}
+B 2 420 -1100 1220 -700 {flags=graph
+y1=2.9e-17
+y2=0.00021
+ypos1=0
+ypos2=2
+divy=10
+subdivy=1
+unity=1
+x1=0
+x2=0.0001
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rainbow=0
+color="13 14 17 18"
+node="IDM1; i(@m.x1.xm1.msky130_fd_pr__pfet_g5v0d10v5[id])
+IDM3; i(@m.x1.xm3.msky130_fd_pr__nfet_g5v0d10v5[id])
+IDM2; i(@m.x1.xm2.msky130_fd_pr__pfet_g5v0d10v5[id])
+IDM4; i(@m.x1.xm4.msky130_fd_pr__nfet_g5v0d10v5[id])"
+hilight_wave=-1}
+B 2 2020 -300 2820 100 {flags=graph
+y1=-0.027
+y2=3.4
+ypos1=0
+ypos2=2
+divy=10
+subdivy=1
+unity=1
+x1=0
+x2=0.0001
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+dataset=-1
+unitx=1
+logx=0
+logy=0
+rainbow=0
+color="7 13 14"
+node="clk
+x1.clka
+x1.clkb"}
 T {Model Tiny Tapeout analog parasitics} 60 -30 0 0 0.3 0.3 {}
 N -110 -60 -80 -60 {
 lab=GND}
@@ -61,6 +177,7 @@ C {devices/code.sym} -20 50 0 0 {name=STIMULI only_toplevel=false value="
 
 .tran 10n 100u
 .save all
+.options savecurrents
 
 .control
 run
@@ -90,3 +207,10 @@ C {charge_pump.sym} 70 -250 0 0 {name=x1}
 C {devices/vdd.sym} -110 -270 0 0 {name=l2 lab=VAPWR}
 C {devices/gnd.sym} -80 -210 0 0 {name=l7 lab=GND}
 C {devices/lab_pin.sym} 220 -270 2 0 {name=p5 sig_type=std_logic lab=ua[0]}
+C {devices/gnd.sym} 210 -160 3 0 {name=l1 lab=GND}
+C {devices/lab_pin.sym} 150 -160 0 0 {name=p3 sig_type=std_logic lab=ua[0]}
+C {devices/res.sym} 180 -160 3 1 {name=R2
+value=100meg
+footprint=1206
+device=resistor
+m=1}
