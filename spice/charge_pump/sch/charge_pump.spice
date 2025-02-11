@@ -1,0 +1,19 @@
+** sch_path: /home/amedcalf/projects/tt10-sonos-flash-party/xschem/charge_pump.sch
+.subckt charge_pump VAPWR VOUT clk VGND
+*.PININFO clk:I VAPWR:I VGND:I VOUT:O
+XC3 VOUT VGND sky130_fd_pr__cap_mim_m3_1 W=30 L=25 m=1
+XM5 stage1 VAPWR VAPWR VAPWR sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XC1 clka stage1 sky130_fd_pr__cap_mim_m3_1 W=25 L=25 m=1
+XM6 stage2 stage1 stage1 stage1 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM7 VOUT stage2 stage2 stage2 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XC2 clkb stage2 sky130_fd_pr__cap_mim_m3_1 W=25 L=25 m=1
+XM1 clka clkina VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=1 W=1.5 nf=1 m=1
+XM2 clkb clkinb VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=1 W=1.5 nf=1 m=1
+XM3 clka clkina VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=1 nf=1 m=1
+XM4 clkb clkinb VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=1 nf=1 m=1
+XM8 clkina clkinb VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=1 W=0.5 nf=1 m=1
+XM9 clkina clkinb VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=0.5 nf=1 m=1
+XM10 clkinb clk VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=1 W=0.5 nf=1 m=1
+XM11 clkinb clk VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=0.5 nf=1 m=1
+.ends
+.end
