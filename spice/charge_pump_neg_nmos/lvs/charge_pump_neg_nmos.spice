@@ -1,0 +1,19 @@
+* NGSPICE file created from charge_pump_neg_nmos.ext - technology: sky130A
+
+.subckt charge_pump_neg_nmos clk VOUT VAPWR VGND
+X0 clkina clkinb VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=1
+X1 clkinb clk VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=1
+X2 stage1 stage1 VGND stage1 sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.5
+X3 stage2 stage2 stage1 stage2 sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.5
+X4 clkb clkinb VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=1
+X5 clkb clkinb VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.435 pd=3.58 as=0.435 ps=3.58 w=1.5 l=1
+X6 VOUT VGND sky130_fd_pr__cap_mim_m3_1 l=25 w=30
+X7 VOUT VOUT stage2 VOUT sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.5
+X8 clkinb clk VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=1
+X9 clkina clkinb VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=1
+X10 clka clkina VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=1
+X11 clka clkina VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.435 pd=3.58 as=0.435 ps=3.58 w=1.5 l=1
+X12 clkb stage2 sky130_fd_pr__cap_mim_m3_1 l=25 w=25
+X13 clka stage1 sky130_fd_pr__cap_mim_m3_1 l=25 w=25
+.ends
+
