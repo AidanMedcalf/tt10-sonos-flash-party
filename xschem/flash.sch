@@ -174,7 +174,7 @@ sa=0 sb=0 sd=0
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
-C {charge_pump_neg.sym} -230 -210 0 0 {name=x2}
+C {charge_pump_neg_nmos.sym} -230 -210 0 0 {name=x2}
 C {devices/lab_pin.sym} -380 -230 2 1 {name=p6 sig_type=std_logic lab=VAPWR}
 C {devices/lab_pin.sym} -380 -210 2 1 {name=p10 sig_type=std_logic lab=clk}
 C {vgnd.sym} -400 -180 0 0 {name=l1}
