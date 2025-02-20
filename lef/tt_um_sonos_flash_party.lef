@@ -1,7 +1,3 @@
-VERSION 5.7 ;
-  NOWIREEXTENSIONATPIN ON ;
-  DIVIDERCHAR "/" ;
-  BUSBITCHARS "[]" ;
 MACRO tt_um_sonos_flash_party
   CLASS BLOCK ;
   FOREIGN tt_um_sonos_flash_party ;
@@ -439,6 +435,26 @@ MACRO tt_um_sonos_flash_party
         RECT 7.000 5.000 9.000 220.760 ;
     END
   END VAPWR
+  OBS
+      LAYER nwell ;
+        RECT 24.060 129.750 120.500 204.860 ;
+      LAYER li1 ;
+        RECT 24.240 130.140 121.240 204.530 ;
+      LAYER met1 ;
+        RECT 24.175 130.800 121.670 204.560 ;
+      LAYER met2 ;
+        RECT 45.710 149.780 121.190 210.450 ;
+      LAYER met3 ;
+        RECT 24.060 149.800 110.450 210.430 ;
+      LAYER met4 ;
+        RECT 24.120 1.400 137.070 210.480 ;
+        RECT 24.120 1.000 39.170 1.400 ;
+        RECT 40.870 1.000 58.490 1.400 ;
+        RECT 60.190 1.000 77.810 1.400 ;
+        RECT 79.510 1.000 97.130 1.400 ;
+        RECT 98.830 1.000 116.450 1.400 ;
+        RECT 118.150 1.000 135.770 1.400 ;
+  END
 END tt_um_sonos_flash_party
 END LIBRARY
 
