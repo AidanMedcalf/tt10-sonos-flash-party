@@ -59,3 +59,23 @@ box shrink center 0.12u
 paint mvnsubdiffcont
 box grow center 0.08u
 paint locali
+
+proc port_coords {name} {
+  goto $name
+  set coords [box values]
+  return [list [magic::i2u [lindex $coords 0]] [magic::i2u [lindex $coords 1]] [magic::i2u [lindex $coords 2]] [magic::i2u [lindex $coords 3]]]
+}
+
+# Route clk net
+goto x2/clk
+box grow left 1u
+paint metal1
+goto x3/clk
+box grow left 1u
+paint metal1
+set start_point [port_coords x2/clk]
+set end_point [port_coords x3/clk]
+box [lindex $start_point 0]u [lindex $start_point 3]u [lindex $end_point 2]u [lindex $end_point 1]u
+box move left 1u
+paint metal1
+
