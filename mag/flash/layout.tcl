@@ -4,11 +4,11 @@ erase
 
 # charge_pump_neg_nmos
 select cell x2
-move to 0u 51u
+move to 4u 51u
 
 # charge_pump
 select cell x3
-move to 0u 20u
+move to 4u 20u
 
 # vprog_controller (sonos_gate)
 select cell x4
@@ -20,7 +20,7 @@ move to 80u 10u
 
 # inverter (read_en_b)
 select cell x6
-move to 0u 10u
+move to 4u 10u
 
 # vprog_controller (sonos_body)
 select cell x7
@@ -78,4 +78,25 @@ set end_point [port_coords x3/clk]
 box [lindex $start_point 0]u [lindex $start_point 3]u [lindex $end_point 2]u [lindex $end_point 1]u
 box move left 1u
 paint metal1
+
+# Place ports
+proc draw_port {name x y width height layer use class} {
+    box ${x}u ${y}u [expr ${x} + ${width}]u [expr ${y} + ${height}]u
+    paint $layer
+    label $name FreeSans 0.25u -$layer
+    port make
+    port use $use
+    port class $class
+    port connections n s e w
+}
+
+draw_port data_out 0 6 2 2 met2 signal output
+draw_port VDPWR 0 9 2 2 met2 power input
+draw_port VAPWR 0 12 2 2 met2 power input
+draw_port VGND 0 15 2 2 met2 ground input
+draw_port clk 0 18 2 2 met2 signal input
+draw_port VPROGMON 0 21 2 2 met2 signal input
+draw_port prog_en 0 24 2 2 met2 signal input
+draw_port erase_en 0 27 2 2 met2 signal input
+draw_port read_en 0 30 2 2 met2 signal input
 
