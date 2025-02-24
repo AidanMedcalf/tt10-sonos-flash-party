@@ -45,7 +45,7 @@ move to 70u 10u
 # SONOS 
 select cell X1 
 # Add an nwell around the SONOS (to make DRC happy)
-move to 50u 10u
+move to 19.996u 9.645u
 box grow center 1u
 paint nwell
 box shrink center 2.45u
@@ -66,19 +66,6 @@ proc port_coords {name} {
   return [list [magic::i2u [lindex $coords 0]] [magic::i2u [lindex $coords 1]] [magic::i2u [lindex $coords 2]] [magic::i2u [lindex $coords 3]]]
 }
 
-# Route clk net
-goto x2/clk
-box grow left 1u
-paint metal1
-goto x3/clk
-box grow left 1u
-paint metal1
-set start_point [port_coords x2/clk]
-set end_point [port_coords x3/clk]
-box [lindex $start_point 0]u [lindex $start_point 3]u [lindex $end_point 2]u [lindex $end_point 1]u
-box move left 1u
-paint metal1
-
 # Place ports
 proc draw_port {name x y width height layer use class} {
     box ${x}u ${y}u [expr ${x} + ${width}]u [expr ${y} + ${height}]u
@@ -90,13 +77,26 @@ proc draw_port {name x y width height layer use class} {
     port connections n s e w
 }
 
-draw_port data_out 0 6 2 2 met2 signal output
-draw_port VDPWR 0 9 2 2 met2 power input
-draw_port VAPWR 0 12 2 2 met2 power input
-draw_port VGND 0 15 2 2 met2 ground input
-draw_port clk 0 18 2 2 met2 signal input
-draw_port VPROGMON 0 21 2 2 met2 signal input
-draw_port prog_en 0 24 2 2 met2 signal input
-draw_port erase_en 0 27 2 2 met2 signal input
-draw_port read_en 0 30 2 2 met2 signal input
-
+# Floor plan from magic companion
+select cell X1; move to 19.996u 9.645u
+select cell x2; move to 4.246u 18.880u
+select cell x3; move to 4.239u 49.025u
+select cell x4; move to 52u 1.730u
+select cell x5; move to 38.675u 8.684u
+select cell x6; move to 4.257u 2.785u
+select cell x7; move to 72.6u 1.726u
+select cell XM3; move to 0u -6.1u
+select cell XM2; move to 14.580u -6.1u
+select cell XM1; move to 39.16u -6.1u
+select cell XM4; move to 21.538u 1.8u
+select cell XM5; move to 31.420u 7.974u
+select cell XM8; move to 11.615u 10.364u
+draw_port data_out 44.870 10.919 2.000 2.000 metal2 signal output
+draw_port VDPWR -0.187 7.647 2.000 2.000 metal2 signal output
+draw_port VAPWR -0.517 48.198 2.000 2.000 metal2 signal output
+draw_port VGND -0.062 15.478 2.000 2.000 metal2 signal output
+draw_port clk -0.373 36.820 2.000 2.000 metal2 signal output
+draw_port VPROGMON 11.57 -5.36 2.000 2.000 metal2 signal output
+draw_port prog_en 66.765 -1.317 2.000 2.000 metal2 signal output
+draw_port erase_en 69.154 -1.304 2.000 2.000 metal2 signal output
+draw_port read_en -0.108 4.667 2.000 2.000 metal2 signal output
