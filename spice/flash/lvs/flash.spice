@@ -1,22 +1,5 @@
 * NGSPICE file created from flash.ext - technology: sky130A
 
-.subckt charge_pump_neg_nmos clk VOUT VAPWR VGND stage2 stage1
-X0 clkina clkinb VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=1
-X1 clkinb clk VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=1
-X2 stage1 stage1 VGND stage1 sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.5
-X3 stage2 stage2 stage1 stage2 sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.5
-X4 clkb clkinb VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=1
-X5 clkb clkinb VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.435 pd=3.58 as=0.435 ps=3.58 w=1.5 l=1
-X6 VOUT VGND sky130_fd_pr__cap_mim_m3_1 l=25 w=30
-X7 VOUT VOUT stage2 VOUT sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.5
-X8 clkinb clk VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=1
-X9 clkina clkinb VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=1
-X10 clka clkina VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=1
-X11 clkb stage2 sky130_fd_pr__cap_mim_m3_1 l=25 w=25
-X12 clka clkina VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.435 pd=3.58 as=0.435 ps=3.58 w=1.5 l=1
-X13 clka stage1 sky130_fd_pr__cap_mim_m3_1 l=25 w=25
-.ends
-
 .subckt charge_pump VAPWR VOUT clk VGND stage2 stage1
 X0 clkina clkinb VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=1
 X1 clkinb clk VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=1
@@ -26,6 +9,23 @@ X4 clkb clkinb VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps
 X5 clkb clkinb VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.435 pd=3.58 as=0.435 ps=3.58 w=1.5 l=1
 X6 VOUT VGND sky130_fd_pr__cap_mim_m3_1 l=25 w=30
 X7 VOUT stage2 stage2 stage2 sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.5
+X8 clkinb clk VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=1
+X9 clkina clkinb VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=1
+X10 clka clkina VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=1
+X11 clkb stage2 sky130_fd_pr__cap_mim_m3_1 l=25 w=25
+X12 clka clkina VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.435 pd=3.58 as=0.435 ps=3.58 w=1.5 l=1
+X13 clka stage1 sky130_fd_pr__cap_mim_m3_1 l=25 w=25
+.ends
+
+.subckt charge_pump_neg_nmos clk VOUT VAPWR VGND stage2 stage1
+X0 clkina clkinb VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=1
+X1 clkinb clk VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=1
+X2 stage1 stage1 VGND stage1 sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.5
+X3 stage2 stage2 stage1 stage2 sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.5
+X4 clkb clkinb VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=1
+X5 clkb clkinb VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.435 pd=3.58 as=0.435 ps=3.58 w=1.5 l=1
+X6 VOUT VGND sky130_fd_pr__cap_mim_m3_1 l=25 w=30
+X7 VOUT VOUT stage2 VOUT sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.5
 X8 clkinb clk VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=1
 X9 clkina clkinb VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=1
 X10 clka clkina VGND VGND sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=1
@@ -107,39 +107,42 @@ XXM1 A Y VDD VDD sky130_fd_pr__pfet_01v8_29FY9H
 XXM2 Y VSS A VSS sky130_fd_pr__nfet_01v8_KAAY2V
 .ends
 
-.subckt sky130_fd_pr__pfet_g5v0d10v5_VPAE37 w_n2258_n347#
+.subckt sky130_fd_pr__pfet_g5v0d10v5_VPAE37 a_n2058_n50# a_n2000_n147# a_2000_n50#
++ w_n2258_n347#
 X0 a_2000_n50# a_n2000_n147# a_n2058_n50# w_n2258_n347# sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=20
 .ends
 
-.subckt sky130_fd_pr__pfet_g5v0d10v5_GJ3XY6 w_n1258_n347#
+.subckt sky130_fd_pr__pfet_g5v0d10v5_GJ3XY6 a_1000_n50# w_n1258_n347# a_n1000_n147#
++ a_n1058_n50#
 X0 a_1000_n50# a_n1000_n147# a_n1058_n50# w_n1258_n347# sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=10
 .ends
 
-.subckt sky130_fd_pr__nfet_g5v0d10v5_9UU773 a_n242_n722#
+.subckt sky130_fd_pr__nfet_g5v0d10v5_9UU773 a_50_n500# a_n242_n722# a_n108_n500# a_n50_n588#
 X0 a_50_n500# a_n50_n588# a_n108_n500# a_n242_n722# sky130_fd_pr__nfet_g5v0d10v5 ad=1.45 pd=10.58 as=1.45 ps=10.58 w=5 l=0.5
 .ends
 
-.subckt sky130_fd_pr__nfet_g5v0d10v5_HQS8YU a_n242_n422#
+.subckt sky130_fd_pr__nfet_g5v0d10v5_HQS8YU a_50_n200# a_n242_n422# a_n108_n200# a_n50_n288#
 X0 a_50_n200# a_n50_n288# a_n108_n200# a_n242_n422# sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=0.5
 .ends
 
-.subckt sky130_fd_bs_flash__special_sonosfet_star_EA7MKQ w_n439_n473#
+.subckt sky130_fd_bs_flash__special_sonosfet_star_EA7MKQ a_n83_n45# dw_n439_n473#
++ a_n33_n133# a_22_n45# w_n439_n473#
 X0 a_22_n45# a_n33_n133# a_n83_n45# w_n439_n473# sky130_fd_bs_flash__special_sonosfet_star ad=0.13725 pd=1.51 as=0.13725 ps=1.51 w=0.45 l=0.22
 .ends
 
-.subckt flash
-Xx2 x2/clk x2/VOUT x2/VAPWR VSUBS x2/stage2 x2/stage1 charge_pump_neg_nmos
-Xx3 x3/VAPWR x3/VOUT x3/clk VSUBS x3/stage2 x3/stage1 charge_pump
-Xx4 x4/pos_en x4/neg_en x4/VOUT x4/VDPWR VSUBS x4/VPRGPOS x4/VPRGNEG vprog_controller
-Xx5 x5/A x5/Y x5/VDD VSUBS inverter
-Xx6 x6/A x6/Y x6/VDD VSUBS inverter
-Xx7 x7/pos_en x7/neg_en x7/VOUT x7/VDPWR VSUBS x7/VPRGPOS x7/VPRGNEG vprog_controller
-XXM1 XM3/w_n1258_n347# sky130_fd_pr__pfet_g5v0d10v5_VPAE37
-XXM2 XM3/w_n1258_n347# sky130_fd_pr__pfet_g5v0d10v5_VPAE37
-XXM3 XM3/w_n1258_n347# sky130_fd_pr__pfet_g5v0d10v5_GJ3XY6
-XXM4 XM4/w_n2258_n347# sky130_fd_pr__pfet_g5v0d10v5_VPAE37
-XXM5 VSUBS sky130_fd_pr__nfet_g5v0d10v5_9UU773
-XXM8 VSUBS sky130_fd_pr__nfet_g5v0d10v5_HQS8YU
-XX1 w_9110_n1580# sky130_fd_bs_flash__special_sonosfet_star_EA7MKQ
+.subckt flash VDPWR VAPWR VGND clk prog_en erase_en read_en data_out VPROGMON
+Xx3 VAPWR x3/VOUT clk VGND x3/stage2 x3/stage1 charge_pump
+Xx2 clk x2/VOUT VAPWR VGND x2/stage2 x2/stage1 charge_pump_neg_nmos
+Xx4 prog_en erase_en x4/VOUT VDPWR VGND x3/VOUT x2/VOUT vprog_controller
+Xx5 VGND data_out VDPWR VGND inverter
+Xx6 read_en x6/Y VDPWR VGND inverter
+Xx7 erase_en prog_en x7/VOUT VDPWR VGND x3/VOUT x2/VOUT vprog_controller
+XXM1 li_7306_n1074# li_7306_n1074# x3/VOUT x3/VOUT sky130_fd_pr__pfet_g5v0d10v5_VPAE37
+XXM2 VPROGMON VPROGMON li_7306_n1074# li_7306_n1074# sky130_fd_pr__pfet_g5v0d10v5_VPAE37
+XXM3 VPROGMON VPROGMON VGND VGND sky130_fd_pr__pfet_g5v0d10v5_GJ3XY6
+XXM4 VDPWR x6/Y VGND VDPWR sky130_fd_pr__pfet_g5v0d10v5_VPAE37
+XXM5 VGND VGND m1_4558_2458# VGND sky130_fd_pr__nfet_g5v0d10v5_9UU773
+XXM8 m1_2666_2466# VGND VGND read_en sky130_fd_pr__nfet_g5v0d10v5_HQS8YU
+XX1 m1_2666_2466# x3/VOUT x4/VOUT m1_4558_2458# x7/VOUT sky130_fd_bs_flash__special_sonosfet_star_EA7MKQ
 .ends
 

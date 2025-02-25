@@ -96,7 +96,7 @@ draw_port VDPWR -0.187 7.647 2.000 2.000 metal2 signal output
 draw_port VAPWR -0.517 48.198 2.000 2.000 metal2 signal output
 draw_port VGND -0.062 15.478 2.000 2.000 metal2 signal output
 draw_port clk -0.373 36.820 2.000 2.000 metal2 signal output
-draw_port VPROGMON 11.57 -5.36 2.000 2.000 metal2 signal output
+draw_port VPROGMON 12.5 -5.36 2.000 2.000 metal2 signal output
 draw_port prog_en 66.765 -1.317 2.000 2.000 metal2 signal output
 draw_port erase_en 69.154 -1.304 2.000 2.000 metal2 signal output
 draw_port read_en -0.108 4.667 2.000 2.000 metal2 signal output
