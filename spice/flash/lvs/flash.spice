@@ -134,14 +134,14 @@ X0 a_22_n45# a_n33_n133# a_n83_n45# w_n439_n473# sky130_fd_bs_flash__special_son
 Xx3 VAPWR x3/VOUT clk VGND x3/stage2 x3/stage1 charge_pump
 Xx2 clk x2/VOUT VAPWR VGND x2/stage2 x2/stage1 charge_pump_neg_nmos
 Xx4 prog_en erase_en x4/VOUT VDPWR VGND x3/VOUT x2/VOUT vprog_controller
-Xx5 VGND data_out VDPWR VGND inverter
+Xx5 x5/A data_out VDPWR VGND inverter
 Xx6 read_en x6/Y VDPWR VGND inverter
 Xx7 erase_en prog_en x7/VOUT VDPWR VGND x3/VOUT x2/VOUT vprog_controller
 XXM1 li_7306_n1074# li_7306_n1074# x3/VOUT x3/VOUT sky130_fd_pr__pfet_g5v0d10v5_VPAE37
 XXM2 VPROGMON VPROGMON li_7306_n1074# li_7306_n1074# sky130_fd_pr__pfet_g5v0d10v5_VPAE37
 XXM3 VPROGMON VPROGMON VGND VGND sky130_fd_pr__pfet_g5v0d10v5_GJ3XY6
-XXM4 VDPWR x6/Y VGND VDPWR sky130_fd_pr__pfet_g5v0d10v5_VPAE37
-XXM5 VGND VGND m1_4558_2458# VGND sky130_fd_pr__nfet_g5v0d10v5_9UU773
+XXM4 VDPWR x6/Y x5/A VDPWR sky130_fd_pr__pfet_g5v0d10v5_VPAE37
+XXM5 x5/A x5/A m1_4558_2458# x5/A sky130_fd_pr__nfet_g5v0d10v5_9UU773
 XXM8 m1_2666_2466# VGND VGND read_en sky130_fd_pr__nfet_g5v0d10v5_HQS8YU
 XX1 m1_2666_2466# x3/VOUT x4/VOUT m1_4558_2458# x7/VOUT sky130_fd_bs_flash__special_sonosfet_star_EA7MKQ
 .ends
