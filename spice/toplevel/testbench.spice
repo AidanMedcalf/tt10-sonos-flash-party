@@ -6,23 +6,19 @@
 V1 VGND 0 0
 V2 VDPWR VGND 1.8
 V3 VAPWR VGND 3.3
-V4 clk GND PULSE(0 1.8 0 0 0 250n 500n)
+V4 clk VGND PULSE(0 1.8 0 0 0 250n 500n)
 V5 ena VGND 1.8
 V6 rst_n VGND 1.8
 
-V7 prog_en GND PULSE(0 1.8 10u 0 0 10u 1s)
-V8 erase_en GND PULSE(0 1.8 25u 0 0 10u 1s)
-V9 read_en GND PULSE(0 1.8 40u 0 0 2u 1s)
+V7 prog_en VGND PULSE(0 1.8 10u 0 0 10u 1s)
+V8 erase_en VGND PULSE(0 1.8 25u 0 0 10u 1s)
+V9 read_en VGND PULSE(0 1.8 40u 0 0 2u 1s)
 
-R0 ui_in[0] prog_en 0
-R1 ui_in[1] erase_en 0
-R2 ui_in[2] read_en 0
-R3 uo_out[0] data_out 0
-R4 ua[0] vprogmon 0
-
-* Model TT infra parasitics + measurement equipment impedance:
-C0 vprogmon VGND 5p
-R5 vprogmon VGND 10meg
+V10 ui_in[0] prog_en 0
+V11 ui_in[1] erase_en 0
+V12 ui_in[2] read_en 0
+V13 uo_out[0] data_out 0
+V14 ua[0] vprogmon 0
 
 .include "tt_um_sonos_flash_party.spice"
 
@@ -36,11 +32,11 @@ x1 clk ena rst_n
 + VDPWR VGND VAPWR
 + tt_um_sonos_flash_party
 
-.tran 1n 100u
+.tran 10n 100u
 
 .control
 run
-plot prog_en erase_en read_en data_out vprogmon
+plot prog_en erase_en read_en data_out vprogmon x1.flash_0.x7.VPRGPOS x1.flash_0.x7.VPRGNEG
 .endc
 .end
 

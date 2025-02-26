@@ -13,7 +13,7 @@ ext2sim
 extresist tolerance 10
 extresist
 ext2spice lvs
-ext2spice cthresh 1.7 ; # values below 1.7 cause floating nodes (singular matrix in spice)
+ext2spice cthresh 1
 ext2spice extresist on
 ext2spice -o $output
 quit -noprompt
