@@ -72,8 +72,8 @@ node="clk
 x1.clkinb
 x1.clkina"}
 B 2 1220 -700 2020 -300 {flags=graph
-y1=1.4
-y2=5.5
+y1=1.9
+y2=9
 ypos1=0
 ypos2=2
 divy=10
@@ -169,7 +169,8 @@ format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
 .lib $::SKYWATER_MODELS/sky130.lib.spice tt
-
+.include ../../spice/charge_pump/pex/charge_pump.spice
+*.include ../../spice/charge_pump/sch/charge_pump.spice
 "
 spice_ignore=false}
 C {devices/lab_wire.sym} -110 -150 0 0 {name=p2 sig_type=std_logic lab=CLK}
@@ -210,7 +211,7 @@ C {devices/lab_pin.sym} 220 -270 2 0 {name=p5 sig_type=std_logic lab=ua[0]}
 C {devices/gnd.sym} 210 -160 3 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 150 -160 0 0 {name=p3 sig_type=std_logic lab=ua[0]}
 C {devices/res.sym} 180 -160 3 1 {name=R2
-value=100meg
+value=10meg
 footprint=1206
 device=resistor
 m=1}
