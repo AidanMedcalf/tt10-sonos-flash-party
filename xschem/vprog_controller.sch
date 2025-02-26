@@ -75,14 +75,14 @@ lab=pos_en}
 N 120 -800 120 -780 {
 lab=VGND}
 N 120 -980 120 -960 {
-lab=VDPWR}
+lab=VDPWR2}
 N 120 -880 140 -880 {
 lab=pos_en_b}
 N 30 -880 50 -880 {
 lab=pos_en}
 N 120 -780 120 -760 {
 lab=VGND}
-N 120 -960 120 -930 {lab=VDPWR}
+N 120 -960 120 -930 {lab=VDPWR2}
 N 120 -830 120 -800 {lab=VGND}
 N 830 -350 830 -230 {lab=VPRGNEG}
 N 830 -610 890 -610 {lab=VOUT}
@@ -210,8 +210,8 @@ C {devices/lab_pin.sym} 590 -450 0 1 {name=p3 sig_type=std_logic lab=neg_en_b}
 C {devices/iopin.sym} -160 -750 0 1 {name=p14 lab=VDPWR sim_pinnumber=4}
 C {devices/lab_pin.sym} 140 -880 0 1 {name=p15 sig_type=std_logic lab=pos_en_b}
 C {devices/ipin.sym} 30 -880 0 0 {name=p16 lab=pos_en sim_pinnumber=1}
-C {devices/iopin.sym} -160 -720 0 1 {name=p18 lab=VGND sim_pinnumber=5}
-C {devices/lab_pin.sym} -160 -720 0 1 {name=p19 sig_type=std_logic lab=VGND}
+C {devices/iopin.sym} -160 -650 0 1 {name=p18 lab=VGND sim_pinnumber=5}
+C {devices/lab_pin.sym} -160 -650 0 1 {name=p19 sig_type=std_logic lab=VGND}
 C {devices/lab_pin.sym} -160 -750 0 1 {name=p20 sig_type=std_logic lab=VDPWR}
 C {devices/lab_pin.sym} 120 -980 0 1 {name=p21 sig_type=std_logic lab=VDPWR}
 C {devices/lab_pin.sym} 120 -760 0 1 {name=p6 sig_type=std_logic lab=VGND}
@@ -335,7 +335,7 @@ sa=0 sb=0 sd=0
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 790 -780 0 0 {name=p2 sig_type=std_logic lab=VDPWR}
+C {devices/lab_pin.sym} 790 -780 0 0 {name=p2 sig_type=std_logic lab=VDPWR1}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 810 -460 0 0 {name=M18
 L=3
 W=1
@@ -409,3 +409,5 @@ sa=0 sb=0 sd=0
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
+C {devices/iopin.sym} -160 -720 0 1 {name=p33 lab=VDPWR1 sim_pinnumber=8}
+C {devices/lab_pin.sym} -160 -720 0 1 {name=p34 sig_type=std_logic lab=VDPWR1}
