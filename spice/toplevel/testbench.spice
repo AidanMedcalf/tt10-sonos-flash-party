@@ -37,6 +37,7 @@ x1 clk ena rst_n
 + tt_um_sonos_flash_party
 
 .tran 10n 100u
+.options savecurrents
 
 .control
 run
