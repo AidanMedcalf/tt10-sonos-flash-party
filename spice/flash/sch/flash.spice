@@ -1,0 +1,98 @@
+** sch_path: /home/amedcalf/projects/tt10-sonos-flash-party/xschem/flash.sch
+.subckt flash VDPWR VAPWR VGND clk prog_en erase_en read_en data_out VPROGMON
+*.PININFO VAPWR:I VGND:I clk:I prog_en:I erase_en:I VDPWR:I VPROGMON:O read_en:I data_out:O
+X1 net3 sonos_gate net2 sonos_body sky130_fd_bs_flash__special_sonosfet_star w=0.45 l=0.22 m=1
+x3 VAPWR VPRGPOS clk VGND charge_pump
+XM1 net1 net1 VPRGPOS VPRGPOS sky130_fd_pr__pfet_g5v0d10v5 L=20 W=0.5 nf=1 m=1
+XM2 VPROGMON VPROGMON net1 net1 sky130_fd_pr__pfet_g5v0d10v5 L=20 W=0.5 nf=1 m=1
+XM3 VGND VGND VPROGMON VPROGMON sky130_fd_pr__pfet_g5v0d10v5 L=10 W=0.5 nf=1 m=1
+XM4 data_out_b read_en_b VDPWR VDPWR sky130_fd_pr__pfet_g5v0d10v5 L=20 W=0.5 nf=1 m=1
+x5 data_out_b data_out VDPWR VGND inverter
+x6 read_en read_en_b VDPWR VGND inverter
+XM5 net3 data_out_b data_out_b data_out_b sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=5 nf=1 m=1
+XM8 net2 read_en VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
+x2 clk VPRGNEG VAPWR VGND charge_pump_neg_nmos
+x4 prog_en erase_en sonos_gate VDPWR VGND VPRGPOS VPRGNEG VDPWR vprog_controller
+x7 erase_en prog_en sonos_body VDPWR VGND VPRGPOS VPRGNEG VDPWR vprog_controller
+.ends
+
+* expanding   symbol:  charge_pump.sym # of pins=4
+** sym_path: /home/amedcalf/projects/tt10-sonos-flash-party/xschem/charge_pump.sym
+** sch_path: /home/amedcalf/projects/tt10-sonos-flash-party/xschem/charge_pump.sch
+.subckt charge_pump VAPWR VOUT clk VGND
+*.PININFO clk:I VAPWR:I VGND:I VOUT:O
+XC3 VOUT VGND sky130_fd_pr__cap_mim_m3_1 W=30 L=25 m=1
+XM5 stage1 VAPWR VAPWR VAPWR sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XC1 clka stage1 sky130_fd_pr__cap_mim_m3_1 W=25 L=25 m=1
+XM6 stage2 stage1 stage1 stage1 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM7 VOUT stage2 stage2 stage2 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XC2 clkb stage2 sky130_fd_pr__cap_mim_m3_1 W=25 L=25 m=1
+XM1 clka clkina VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=1 W=1.5 nf=1 m=1
+XM2 clkb clkinb VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=1 W=1.5 nf=1 m=1
+XM3 clka clkina VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=1 nf=1 m=1
+XM4 clkb clkinb VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=1 nf=1 m=1
+XM8 clkina clkinb VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=1 W=0.5 nf=1 m=1
+XM9 clkina clkinb VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=0.5 nf=1 m=1
+XM10 clkinb clk VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=1 W=0.5 nf=1 m=1
+XM11 clkinb clk VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=0.5 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  inverter.sym # of pins=4
+** sym_path: /home/amedcalf/projects/tt10-sonos-flash-party/xschem/inverter.sym
+** sch_path: /home/amedcalf/projects/tt10-sonos-flash-party/xschem/inverter.sch
+.subckt inverter A Y VDD VSS
+*.PININFO A:I Y:O VDD:I VSS:I
+XM2 Y A VSS VSS sky130_fd_pr__nfet_01v8 L=3 W=1 nf=1 m=1
+XM1 Y A VDD VDD sky130_fd_pr__pfet_01v8 L=3 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  charge_pump_neg_nmos.sym # of pins=4
+** sym_path: /home/amedcalf/projects/tt10-sonos-flash-party/xschem/charge_pump_neg_nmos.sym
+** sch_path: /home/amedcalf/projects/tt10-sonos-flash-party/xschem/charge_pump_neg_nmos.sch
+.subckt charge_pump_neg_nmos clk VOUT VAPWR VGND
+*.PININFO clk:I VAPWR:I VGND:I VOUT:O
+XC3 VOUT VGND sky130_fd_pr__cap_mim_m3_1 W=30 L=25 m=1
+XM5 stage1 stage1 VGND stage1 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XC1 clka stage1 sky130_fd_pr__cap_mim_m3_1 W=25 L=25 m=1
+XM6 stage2 stage2 stage1 stage2 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM7 VOUT VOUT stage2 VOUT sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XC2 clkb stage2 sky130_fd_pr__cap_mim_m3_1 W=25 L=25 m=1
+XM1 clka clkina VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=1 W=1.5 nf=1 m=1
+XM2 clkb clkinb VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=1 W=1.5 nf=1 m=1
+XM3 clka clkina VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=1 nf=1 m=1
+XM4 clkb clkinb VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=1 nf=1 m=1
+XM8 clkina clkinb VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=1 W=0.5 nf=1 m=1
+XM9 clkina clkinb VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=0.5 nf=1 m=1
+XM10 clkinb clk VAPWR VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=1 W=0.5 nf=1 m=1
+XM11 clkinb clk VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=1 W=0.5 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  vprog_controller.sym # of pins=8
+** sym_path: /home/amedcalf/projects/tt10-sonos-flash-party/xschem/vprog_controller.sym
+** sch_path: /home/amedcalf/projects/tt10-sonos-flash-party/xschem/vprog_controller.sch
+.subckt vprog_controller pos_en neg_en VOUT VDPWR VGND VPRGPOS VPRGNEG VDPWR1
+*.PININFO VPRGNEG:B neg_en:I VOUT:O VDPWR:B pos_en:I VGND:B VPRGPOS:B VDPWR1:B
+XM1 net1 neg_en VDPWR VDPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=3 nf=6 m=1
+XM2 neg_mid_b neg_en_b VDPWR VDPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=3 nf=6 m=1
+XM4 neg_mid_b net1 VPRGNEG VPRGNEG sky130_fd_pr__nfet_g5v0d10v5 L=1 W=0.5 nf=1 m=1
+XM3 net1 neg_mid_b VPRGNEG VPRGNEG sky130_fd_pr__nfet_g5v0d10v5 L=1 W=0.5 nf=1 m=1
+XM7 vintn neg_mid_b VPRGNEG VPRGNEG sky130_fd_pr__nfet_g5v0d10v5 L=3 W=1 nf=2 m=1
+XM8 net2 pos_en_b VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=3 W=1.5 nf=3 m=1
+XM12 net3 pos_mid_b VPRGPOS VPRGPOS sky130_fd_pr__pfet_g5v0d10v5 L=3 W=0.5 nf=1 m=1
+XM13 pos_mid_b net3 VPRGPOS VPRGPOS sky130_fd_pr__pfet_g5v0d10v5 L=3 W=0.5 nf=1 m=1
+XM14 pos_mid_b pos_en VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=3 W=2 nf=4 m=1
+XM15 net3 pos_en_b VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=3 W=2 nf=4 m=1
+XM16 vintp pos_mid_b VPRGPOS VPRGPOS sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=3 nf=6 m=1
+XM11 VOUT neg_mid_b net2 net2 sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=3 nf=6 m=1
+XM17 VOUT VDPWR1 vintp VPRGPOS sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=3 nf=6 m=1
+XM18 VOUT VDPWR vintn VPRGNEG sky130_fd_pr__nfet_g5v0d10v5 L=3 W=1 nf=2 m=1
+XM5 neg_en_b neg_en VDPWR VDPWR sky130_fd_pr__pfet_g5v0d10v5 L=3 W=1 nf=2 m=1
+XM6 neg_en_b neg_en VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=3 W=1 nf=2 m=1
+XM9 pos_en_b pos_en VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=3 W=1 nf=2 m=1
+XM10 pos_en_b pos_en VDPWR VDPWR sky130_fd_pr__pfet_g5v0d10v5 L=3 W=1 nf=2 m=1
+.ends
+
+.end

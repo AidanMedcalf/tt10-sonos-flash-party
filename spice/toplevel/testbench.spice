@@ -1,0 +1,48 @@
+* SONOS Flash Party Testbench
+
+.include "pdk_lib.spice"
+
+* Power supply
+V1 VGND 0 0
+V2 VDPWR VGND 1.8
+V3 VAPWR VGND 3.3
+V4 clk VGND PULSE(0 1.8 0 0 0 250n 500n)
+V5 ena VGND 1.8
+V6 rst_n VGND 1.8
+
+V7 prog_en VGND PULSE(0 1.8 10u 0 0 10u 1s)
+V8 erase_en VGND PULSE(0 1.8 25u 0 0 10u 1s)
+V9 read_en VGND PULSE(0 1.8 40u 0 0 2u 1s)
+
+V10 ui_in[0] prog_en 0
+V11 ui_in[1] erase_en 0
+V12 ui_in[2] read_en 0
+V13 uo_out[0] data_out 0
+V14 ua[0] vprogmon 0
+
+* Model TT infra parasitics + measurement equipment impedance:
+C0 vprogmon VGND 5p
+R5 vprogmon VGND 10meg
+
+.include "tt_um_sonos_flash_party.spice"
+
+x1 clk ena rst_n
++ ua[0] ua[1] ua[2] ua[3] ua[4] ua[5] ua[6] ua[7]
++ ui_in[0] ui_in[1] ui_in[2] VGND VGND VGND VGND VGND
++ VGND VGND VGND VGND VGND VGND VGND VGND
++ uio_oe[0] uio_oe[1] uio_oe[2] uio_oe[3] uio_oe[4] uio_oe[5] uio_oe[6] uio_oe[7]
++ uio_out[0] uio_out[1] uio_out[2] uio_out[3] uio_out[4] uio_out[5] uio_out[6] uio_out[7]
++ uo_out[0] uo_out[1] uo_out[2] uo_out[3] uo_out[4] uo_out[5] uo_out[6] uo_out[7]
++ VDPWR VGND VAPWR
++ tt_um_sonos_flash_party
+
+.tran 10n 100u
+.options savecurrents
+
+.control
+run
+plot prog_en erase_en read_en data_out vprogmon x1.flash_0.x7.VPRGPOS x1.flash_0.x7.VPRGNEG
+.endc
+.end
+
+.end
