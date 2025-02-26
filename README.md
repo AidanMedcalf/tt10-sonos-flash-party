@@ -1,6 +1,6 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg)
 
-# Tiny Tapeout Analog Project Template
+# SONOS Flash Controller for Tiny Tapeout (Sky130)
 
 - [Read the documentation for project](docs/info.md)
 
