@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1738900598
+timestamp 1740594681
 << dnwell >>
 rect 1413 -4193 3461 -2899
 << nwell >>
@@ -1275,15 +1275,20 @@ rect 1584 -1580 1590 -1504
 rect 1636 -1580 1642 -1504
 rect 1584 -1838 1642 -1580
 rect 2156 -1504 2214 -1366
-rect 2328 -1410 3210 -1404
+rect 2686 -1404 2692 -1394
+rect 2328 -1410 2692 -1404
+rect 2836 -1404 2842 -1394
+rect 2836 -1410 3210 -1404
 rect 2328 -1444 2340 -1410
 rect 2408 -1444 2498 -1410
 rect 2566 -1444 2656 -1410
-rect 2724 -1444 2814 -1410
 rect 2882 -1444 2972 -1410
 rect 3040 -1444 3130 -1410
 rect 3198 -1444 3210 -1410
-rect 2328 -1450 3210 -1444
+rect 2328 -1450 2692 -1444
+rect 2686 -1470 2692 -1450
+rect 2836 -1450 3210 -1444
+rect 2836 -1470 2842 -1450
 rect 2156 -1580 2168 -1504
 rect 2202 -1580 2214 -1504
 rect 2156 -1708 2214 -1580
@@ -1746,6 +1751,11 @@ rect 4482 -4114 4756 -4102
 rect 4482 -4180 4540 -4114
 rect 3614 -4238 4540 -4180
 << via1 >>
+rect 2692 -1410 2836 -1394
+rect 2692 -1444 2724 -1410
+rect 2724 -1444 2814 -1410
+rect 2814 -1444 2836 -1410
+rect 2692 -1470 2836 -1444
 rect 3276 -1580 3420 -1504
 rect 2168 -1790 2202 -1714
 rect 2202 -1790 2278 -1714
@@ -1796,6 +1806,8 @@ rect 3626 -3936 3702 -3860
 rect 3626 -4146 3702 -4070
 rect 4494 -4102 4744 -3852
 << metal2 >>
+rect 2686 -1470 2692 -1394
+rect 2836 -1470 2842 -1394
 rect 3270 -1580 3276 -1504
 rect 3420 -1580 4022 -1504
 rect 2162 -1790 2168 -1714
@@ -1857,8 +1869,6 @@ flabel viali 2168 -2090 2312 -2014 0 FreeMono 160 0 0 0 VGND
 flabel viali 2936 -2300 2970 -2224 7 FreeMono 160 0 0 0 pos_mid
 flabel viali 2936 -2090 2970 -2014 7 FreeMono 160 0 0 0 pos_mid
 flabel viali 2168 -2300 2312 -2224 0 FreeMono 160 0 0 0 VGND
-flabel viali 2168 -2810 2312 -2734 0 FreeMono 160 0 0 0 VDPWR
-port 3 nsew
 flabel locali 1494 -2810 1560 -2434 0 FreeMono 160 90 0 0 pos_en_b
 flabel locali 2920 -2810 2986 -2434 0 FreeMono 160 90 0 0 pos_en_b
 flabel locali 3030 -2810 3096 -2434 0 FreeMono 160 90 0 0 neg_en_b
@@ -1885,12 +1895,6 @@ flabel locali 2752 -1580 2786 -1504 0 FreeMono 80 90 0 0 vintp
 flabel locali 2752 -1790 2786 -1714 0 FreeMono 80 90 0 0 vintp
 flabel locali 2436 -1580 2470 -1504 0 FreeMono 80 90 0 0 vintp
 flabel locali 2436 -1790 2470 -1714 0 FreeMono 80 90 0 0 vintp
-flabel viali 2340 -1444 2408 -1410 0 FreeMono 64 180 0 0 VDPWR
-flabel viali 2498 -1444 2566 -1410 0 FreeMono 64 180 0 0 VDPWR
-flabel viali 2656 -1444 2724 -1410 0 FreeMono 64 180 0 0 VDPWR
-flabel viali 2814 -1444 2882 -1410 0 FreeMono 64 180 0 0 VDPWR
-flabel viali 2972 -1444 3040 -1410 0 FreeMono 64 180 0 0 VDPWR
-flabel viali 3130 -1444 3198 -1410 0 FreeMono 64 180 0 0 VDPWR
 flabel polycont 1566 -1884 2146 -1850 0 FreeMono 160 180 0 0 pos_mid
 flabel viali 1510 -1790 1544 -1714 3 FreeMono 160 0 0 0 pos_mid_b
 flabel metal2 2168 -1790 2312 -1714 0 FreeMono 160 0 0 0 VPRGPOS
@@ -1900,7 +1904,6 @@ flabel viali 2910 -1790 2944 -1714 0 FreeMono 80 90 0 0 VPRGPOS
 flabel viali 2594 -1790 2628 -1714 0 FreeMono 80 90 0 0 VPRGPOS
 flabel viali 3078 -3840 3112 -3764 0 FreeMono 160 90 0 0 VOUT
 flabel viali 3078 -3630 3112 -3554 0 FreeMono 160 90 0 0 VOUT
-flabel polycont 2482 -3714 3050 -3680 0 FreeMono 160 0 0 0 VDPWR
 flabel viali 2448 -3374 2482 -3298 0 FreeMono 64 90 0 0 neg_mid
 flabel viali 2878 -3248 3046 -3214 0 FreeMono 160 0 0 0 neg_mid
 flabel viali 2510 -3458 2678 -3424 0 FreeMono 160 0 0 0 neg_mid_b
@@ -1947,16 +1950,11 @@ flabel viali 4472 -2090 4506 -2014 0 FreeMono 160 0 0 0 pos_mid_b
 flabel viali 4472 -2300 4506 -2224 0 FreeMono 160 0 0 0 pos_mid_b
 flabel polycont 3130 -2174 3654 -2140 0 FreeMono 160 0 0 0 pos_en_b
 flabel polycont 3898 -2174 4422 -2140 0 FreeMono 160 0 0 0 pos_en
-flabel viali 3626 -3726 3660 -3650 0 FreeMono 160 90 0 0 VGND
-flabel viali 3626 -3936 3660 -3860 0 FreeMono 160 90 0 0 VGND
-flabel viali 3626 -4146 3660 -4070 0 FreeMono 160 90 0 0 VGND
 flabel polycont 3682 -3810 4262 -3776 0 FreeMono 160 180 0 0 pos_en_b
 flabel polycont 3682 -4020 4262 -3986 0 FreeMono 160 180 0 0 pos_en_b
 flabel viali 4284 -3726 4318 -3650 0 FreeMono 80 90 0 0 dcgint
 flabel viali 4284 -3936 4318 -3860 0 FreeMono 80 90 0 0 dcgint
 flabel viali 4284 -4146 4318 -4070 0 FreeMono 80 90 0 0 dcgint
-flabel via1 4494 -4102 4744 -3852 0 FreeMono 160 0 0 0 VGND
-port 4 nsew
 flabel metal2 3078 -3770 3154 -3626 0 FreeMono 160 0 0 0 VOUT
 flabel viali 4190 -1884 4258 -1850 0 FreeMono 64 0 0 0 neg_mid_b
 flabel viali 4032 -1884 4100 -1850 0 FreeMono 64 0 0 0 neg_mid_b
@@ -1965,8 +1963,6 @@ rlabel viali 3812 -1580 3846 -1504 0 VOUT
 rlabel viali 4128 -1580 4162 -1504 0 VOUT
 rlabel viali 3812 -1790 3846 -1714 0 VOUT
 rlabel viali 4128 -1790 4162 -1714 0 VOUT
-flabel viali 4612 -1664 4646 -1630 0 FreeMono 48 0 0 0 VGND
-flabel viali 3496 -1652 3530 -1618 0 FreeMono 48 0 0 0 VGND
 flabel metal2 3276 -1580 3420 -1504 0 FreeMono 160 0 0 0 VOUT
 port 2 nsew
 flabel metal2 4358 -2188 4422 -2124 0 FreeMono 64 0 0 0 pos_en
@@ -1979,4 +1975,22 @@ flabel viali 1762 -3630 1796 -3554 0 FreeMono 80 90 0 0 VPRGNEG
 flabel metal2 1610 -3732 1754 -3656 0 FreeMono 160 0 0 0 VPRGNEG
 port 6 nsew
 flabel viali 1762 -3840 1796 -3764 0 FreeMono 80 90 0 0 VPRGNEG
+flabel viali 2340 -1444 2408 -1410 0 FreeMono 64 180 0 0 VDPWR1
+flabel viali 2498 -1444 2566 -1410 0 FreeMono 64 180 0 0 VDPWR1
+flabel viali 2656 -1444 2724 -1410 0 FreeMono 64 180 0 0 VDPWR1
+flabel viali 2814 -1444 2882 -1410 0 FreeMono 64 180 0 0 VDPWR1
+flabel viali 2972 -1444 3040 -1410 0 FreeMono 64 180 0 0 VDPWR1
+flabel viali 3130 -1444 3198 -1410 0 FreeMono 64 180 0 0 VDPWR1
+flabel metal2 2692 -1470 2836 -1394 0 FreeMono 160 0 0 0 VDPWR1
+port 10 nsew power input
+flabel metal1 4612 -1360 4652 -1320 0 FreeMono 48 0 0 0 VGND
+port 7 nsew ground default
+flabel viali 3626 -3726 3660 -3650 0 FreeMono 160 90 0 0 VGND
+flabel viali 3626 -3936 3660 -3860 0 FreeMono 160 90 0 0 VGND
+flabel viali 3626 -4146 3660 -4070 0 FreeMono 160 90 0 0 VGND
+flabel via1 4494 -4102 4744 -3852 0 FreeMono 160 0 0 0 VGND
+port 8 nsew ground default
+flabel polycont 2482 -3714 3050 -3680 0 FreeMono 160 0 0 0 VDPWR
+flabel viali 2168 -2810 2312 -2734 0 FreeMono 160 0 0 0 VDPWR
+port 9 nsew power default
 << end >>

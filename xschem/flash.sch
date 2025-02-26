@@ -46,12 +46,14 @@ N 240 -170 280 -170 {lab=data_out_b}
 N 280 -110 280 -80 {lab=#net3}
 N -400 -190 -380 -190 {lab=VGND}
 N -400 -190 -400 -180 {lab=VGND}
+N -300 -130 -290 -130 {lab=VDPWR}
+N -300 80 -290 80 {lab=VDPWR}
 C {devices/flash_cell.sym} 280 -50 0 0 {name=X1 model=sky130_fd_bs_flash__special_sonosfet_star width=0.45 length=0.22 m=1
 format="@name @pinlist @model w=@width l=@length m=@m" }
 C {charge_pump.sym} -230 -320 0 0 {name=x3}
 C {devices/lab_pin.sym} -80 -340 2 0 {name=p2 sig_type=std_logic lab=VPRGPOS}
-C {devices/ipin.sym} -720 -210 0 0 {sim_pinnumber=3 name=p3 lab=VAPWR}
-C {devices/ipin.sym} -720 -170 0 0 {sim_pinnumber=1 name=p4 lab=VGND}
+C {devices/ipin.sym} -720 -210 0 0 {sim_pinnumber=2 name=p3 lab=VAPWR}
+C {devices/ipin.sym} -720 -170 0 0 {sim_pinnumber=3 name=p4 lab=VGND}
 C {vgnd.sym} -390 -280 0 0 {name=l2}
 C {devices/lab_pin.sym} -720 -210 2 0 {name=p5 sig_type=std_logic lab=VAPWR}
 C {devices/lab_pin.sym} -380 -340 2 1 {name=p7 sig_type=std_logic lab=VAPWR}
@@ -64,7 +66,7 @@ C {devices/ipin.sym} -720 -50 0 0 {sim_pinnumber=6 name=p14 lab=erase_en}
 C {devices/lab_pin.sym} -720 -50 2 0 {name=p15 sig_type=std_logic lab=erase_en}
 C {devices/lab_pin.sym} -720 -170 2 0 {name=p16 sig_type=std_logic lab=VGND}
 C {devices/lab_pin.sym} 240 -50 0 0 {name=p17 sig_type=std_logic lab=sonos_gate}
-C {devices/ipin.sym} -720 -240 0 0 {sim_pinnumber=2 name=p21 lab=VDPWR}
+C {devices/ipin.sym} -720 -240 0 0 {sim_pinnumber=1 name=p21 lab=VDPWR}
 C {devices/lab_pin.sym} -720 -240 2 0 {name=p22 sig_type=std_logic lab=VDPWR}
 C {devices/lab_pin.sym} -360 -70 0 0 {name=p24 sig_type=std_logic lab=prog_en}
 C {devices/lab_pin.sym} -120 -60 2 0 {name=p25 sig_type=std_logic lab=sonos_gate}
@@ -114,7 +116,7 @@ sa=0 sb=0 sd=0
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
-C {devices/opin.sym} 870 -110 0 0 {sim_pinnumber=8 name=p20 lab=VPROGMON}
+C {devices/opin.sym} 870 -110 0 0 {sim_pinnumber=9 name=p20 lab=VPROGMON}
 C {devices/ipin.sym} -740 60 0 0 {sim_pinnumber=7 name=p32 lab=read_en}
 C {devices/lab_pin.sym} 280 100 0 1 {name=p37 sig_type=std_logic lab=VGND}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 260 -240 0 0 {name=M4
@@ -136,7 +138,7 @@ C {devices/lab_pin.sym} 540 -200 0 1 {name=p38 sig_type=std_logic lab=data_out}
 C {devices/lab_pin.sym} 490 -270 2 0 {name=p36 sig_type=std_logic lab=VDPWR}
 C {devices/lab_pin.sym} 490 -140 0 1 {name=p40 sig_type=std_logic lab=VGND}
 C {devices/lab_pin.sym} -620 -300 2 1 {name=p39 sig_type=std_logic lab=data_out}
-C {opin.sym} -620 -300 0 0 {sim_pinnumber=9 name=p41 lab=data_out}
+C {opin.sym} -620 -300 0 0 {sim_pinnumber=8 name=p41 lab=data_out}
 C {lab_wire.sym} 410 -200 0 0 {name=p43 sig_type=std_logic lab=data_out_b}
 C {inverter.sym} 490 -200 0 0 {name=x5}
 C {inverter.sym} -610 60 0 0 {name=x6}

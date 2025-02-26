@@ -5,14 +5,14 @@ V {}
 S {}
 E {}
 B 2 420 -300 1220 100 {flags=graph
-y1=-5
-y2=8
+y1=-5.2
+y2=7.6
 ypos1=0
 ypos2=2
 divy=10
 subdivy=4
 unity=1
-x1=-2.10728e-07
+x1=0
 
 divx=5
 subdivx=1
@@ -39,7 +39,7 @@ ua[0]
 x1.data_out_b
 read_en
 uo[0]"
-x2=5.7389272e-05}
+x2=0.0001}
 T {Model Tiny Tapeout analog parasitics} 60 -30 0 0 0.3 0.3 {}
 N -90 -280 -50 -280 {
 lab=VDPWR}
@@ -88,7 +88,8 @@ C {devices/vsource.sym} -280 -250 0 1 {name=V2 value="PULSE(0 1.8 0 0 0 250n 500
 C {devices/title.sym} 210 270 0 0 {name=l5 author="Uri Shaked"}
 C {devices/gnd.sym} -280 -220 0 0 {name=l6 lab=GND}
 C {devices/vdd.sym} -90 -280 0 0 {name=l1 lab=VDPWR}
-C {flash.sym} 100 -220 0 0 {name=x1}
+C {flash.sym} 100 -220 0 0 {name=x1
+spice_sym_def=".include ../spice/flash/lvs/flash.spice"}
 C {devices/vsource.sym} -200 -400 0 0 {name=V3 value=1.8}
 C {devices/gnd.sym} -200 -370 0 0 {name=l2 lab=GND}
 C {devices/vdd.sym} -200 -430 0 0 {name=l7 lab=VDPWR}
