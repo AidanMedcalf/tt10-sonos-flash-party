@@ -20,6 +20,10 @@ V12 ui_in[2] read_en 0
 V13 uo_out[0] data_out 0
 V14 ua[0] vprogmon 0
 
+* Model TT infra parasitics + measurement equipment impedance:
+C0 vprogmon VGND 5p
+R5 vprogmon VGND 10meg
+
 .include "tt_um_sonos_flash_party.spice"
 
 x1 clk ena rst_n
