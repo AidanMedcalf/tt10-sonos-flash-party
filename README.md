@@ -4,6 +4,8 @@
 
 - [Read the documentation for project](docs/info.md)
 
+![SONOS Flash Party](docs/party.png)
+
 ## What is Tiny Tapeout?
 
 Tiny Tapeout is an educational project that aims to make it easier and cheaper than ever to get your digital designs manufactured on a real chip.
