@@ -1,0 +1,106 @@
+#--------------------------------------------------------------
+# CACE circuit characterization file
+#--------------------------------------------------------------
+
+name:           tt_um_sonos_flash_party
+description:    SONOS Flash Party
+PDK:            sky130A
+
+cace_format:    5.2
+
+authorship:
+  designer:         Uri Shaked
+  company:          Tiny Tapeout
+  creation_date:    February 27, 2025
+  license:          Apache 2.0
+
+paths:
+  root:             ..
+  schematic:        xschem
+  layout:           gds
+  netlist:          netlist
+  documentation:    docs
+
+pins:
+  VDPWR:
+    description: Digital power supply
+    type: power
+    direction: inout
+    Vmin: 1.7
+    Vmax: 1.9
+  VAPWR:
+    description: Analog power supply
+    type: power
+    direction: inout
+    Vmin: 3.0
+    Vmax: 3.5
+  VGND:
+    description: Ground
+    type: ground
+    direction: inout
+  ui_in[0]:
+    description: Programming enable
+    type: signal
+    direction: input
+  ui_in[1]:
+    description: Erase enable
+    type: signal
+    direction: input
+  ui_in[2]:
+    description: Read enable
+    type: signal
+    direction: input
+  uo_out[0]:
+    description: Flash data output
+    type: signal
+    direction: output
+  ua[0]:
+    description: Positive charge pump monitor (divided) output
+    type: signal
+    direction: input
+
+default_conditions:
+  vdd:
+    description: Analog power supply voltage
+    display: Vdd
+    unit: V
+    typical: 1.8
+  oload:
+    description: Output load impedance
+    display: RLoad
+    unit: mOhm
+    maximum: 10000
+  corner:
+    description: Process corner
+    display: Corner
+    typical: tt
+  temperature:
+    description: Ambient temperature
+    display: Temp
+    unit: °C
+    typical: 27
+
+parameters:
+  dc_params:
+    tool:
+      ngspice:
+        template: transient.sch
+        format: ascii
+        suffix: .data
+        variables: [a0, ugf, pm]
+    plot:
+      gain_vs_temperature:
+        type: xyplot
+        xaxis: temperature
+        yaxis: a0
+      phase_margin_vs_corner:
+        type: xyplot
+        xaxis: corner
+        yaxis: pm
+    conditions:
+      corner:
+        enumerate: [tt, ff, ss] # fs, sf
+      temperature:
+        minimum: -40
+        typical: 27
+        maximum: 130
